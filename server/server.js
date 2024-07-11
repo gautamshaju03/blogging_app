@@ -13,7 +13,7 @@ connectMongoDB();
 
 app.use(cors({
     origin:[
-        "http://localhost:3000"
+        "https://tranquil-pothos-901a41.netlify.app/"
     ],
     credentials:true
 }))
