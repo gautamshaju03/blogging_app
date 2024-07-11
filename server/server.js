@@ -13,7 +13,7 @@ connectMongoDB();
 
 app.use(cors({
     origin:[
-        "https://eloquent-dragon-35de42.netlify.app"
+        "http://localhost:3000"
     ],
     credentials:true
 }))
@@ -21,10 +21,6 @@ app.use('/', router);
 app.get("/",async(req,res)=>{
     return res.status(200).send({message:"App is running"})
 })
-
-if(process.env.NODE_ENV==="production"){
-    app.use(express.static("client/build"));
-}
 
 const PORT=process.env.PORT || 8000
 

@@ -12,7 +12,7 @@ const Container = styled(Box)`
 `;
 
 const Header = styled(Typography)`
-  font-size: 3rem;
+  font-size: 4.5rem;
   font-weight: bold;
   text-align: left;
 `;
@@ -30,11 +30,11 @@ const ButtonContainer = styled(Box)`
 `;
 
 const CircleImage = styled(Box)`
-  width: 400px; /* Increased width */
-  height: 400px; /* Increased height */
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   overflow: hidden;
-  margin-left: auto; /* Pushes image to the right */
+  margin-left: auto;
   img {
     width: 100%;
     height: 100%;
@@ -45,9 +45,14 @@ const CircleImage = styled(Box)`
 const ContentContainer = styled(Box)`
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Distribute space between elements */
+  justify-content: space-between;
   width: 100%;
   margin-top: 60px;
+`;
+
+const StyledButton = styled(Button)`
+  padding: 6px 16px;
+  font-size: 0.875rem;
 `;
 
 const LandingPage = () => {
@@ -75,8 +80,8 @@ const LandingPage = () => {
             "Connecting Minds, One Post at a Time"
           </SubHeader>
           <ButtonContainer>
-            <Button variant="outlined" onClick={handleLoginClick}>Login</Button>
-            <Button variant="contained" onClick={handleSignupClick}>SignUp</Button>
+            <StyledButton variant="outlined" onClick={handleLoginClick}>Login</StyledButton>
+            <StyledButton variant="contained" onClick={handleSignupClick}>SignUp</StyledButton>
           </ButtonContainer>
         </Box>
         <CircleImage>

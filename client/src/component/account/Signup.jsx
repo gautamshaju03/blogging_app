@@ -50,6 +50,15 @@ const signupInitialValues = {
   password: ""
 };
 
+const isPasswordStrong = (password) => {
+  const minLength = 8;
+  const hasUpperCase = /[A-Z]/.test(password);
+  const hasLowerCase = /[a-z]/.test(password);
+  const hasNumbers = /\d/.test(password);
+  const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  return password.length >= minLength && hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChar;
+};
+
 const Signup = () => {
   const [signup, setSignup] = useState(signupInitialValues);
   const [error, setError] = useState('');
@@ -61,6 +70,11 @@ const Signup = () => {
   };
 
   const signupUser = async () => {
+    if (!isPasswordStrong(signup.password)) {
+      setError('Password must be at least 8 characters long and include uppercase, lowercase, number, and special character.');
+      return;
+    }
+
     try {
       const response = await API.userSignup(signup);
       if (response.isSuccess) {
@@ -84,6 +98,7 @@ const Signup = () => {
         justifyContent: 'center',
         alignItems: 'center',
         minHeight: '100vh',
+        backgroundColor: "#E0F7FA"
       }}
     >
       <Component>

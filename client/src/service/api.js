@@ -2,7 +2,7 @@ import axios from 'axios';
 import { SERVICE_URLS } from '../constants/config';
 import { getAccessToken } from "../utils/utils";
 
-const API_URL = "http://localhost:8000";
+const API_URL = "https://blogging-app-1-sm6l.onrender.com";
 
 const axiosInstance = axios.create({
   baseURL: API_URL,
@@ -64,7 +64,7 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
       config.url = value.url(params.id);
     } else if (value.method === 'PATCH') {
       config.url = value.url(params.id);
-      config.data = params.data;
+      config.data = params;
     } else {
       config.data = params;
     }

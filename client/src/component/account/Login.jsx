@@ -82,13 +82,13 @@ const Login = ({ isUserAuthenticated }) => {
         sessionStorage.setItem('refreshToken', `Bearer ${response.data.refreshToken}`);
         setAccount({ username: response.data.username, name: response.data.name });
         isUserAuthenticated(true);
-        navigate("/", { replace: true });  // Replace the current history entry
+        navigate("/", { replace: true });
       } else {
         setError("Invalid username or password. Please try again.");
       }
     } catch (error) {
       console.error('Error logging in', error);
-      setError('Invalid username or password. Please try again');
+      setError('Error logging in...Please try again');
     }
   };
 
