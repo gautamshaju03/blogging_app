@@ -13,8 +13,7 @@ connectMongoDB();
 
 app.use(cors({
     origin:[
-        "*",
-        "http://localhost:3000"
+        "https://eloquent-dragon-35de42.netlify.app"
     ],
     credentials:true
 }))
