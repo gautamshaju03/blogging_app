@@ -1,0 +1,150 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .home-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+
+  .header {
+    background-color: #00796b;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header h2 {
+    margin: 0;
+  }
+  
+  .header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .header nav ul li {
+    margin: 0 10px;
+  }
+  
+  .header nav ul li a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .header nav ul li a:hover {
+    background-color: #004d40;
+    border-radius: 4px;
+  }
+  
+  .search-container {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  
+  .search-bar {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-left: 700px;
+  }
+  
+  .search-button {
+    padding: 8px 16px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
+    height: 30px;
+  }
+  
+  .search-button:hover {
+    background-color: #00251a;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+
+  .content {
+    display: flex;
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .sidebar {
+    width: 200px;
+    padding: 10px;
+  }
+  
+  .create-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #004d40;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-button:hover {
+    background-color: #00251a;
+  }
+  
+ 
+  .blogs {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    flex: 1;
+  }
+  
+  .blog-item {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 4px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .blog-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+  }
+  
+  .blog-details h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  .blog-details p {
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  
